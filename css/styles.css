@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+header, footer, nav {
+  padding: 0.5rem 1rem;
+}
+
 header {
   background-color: var(--colorAccent2);
   color: var(--colorMainWhite);
@@ -15,16 +19,19 @@ header {
   
 }
 
+
 nav {
+
+  
   background-color: var(--colorAccent1);
 
   ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    text-align: center;
 
     li {
+      padding: 0.5rem 0 0.5rem 0.5rem;
       list-style: none;
+
       
       a {
         text-decoration: none;
@@ -35,10 +42,21 @@ nav {
       }
       }
     }
+
+    @media (min-width: 600px) { 
+      text-align: left !important;
+
+      li {
+        display: inline;
+      }
+    }
   }
 
 }
 
+main {
+  margin: 1rem;
+}
 
 footer {
   background-color: var(--colorAccent2);
