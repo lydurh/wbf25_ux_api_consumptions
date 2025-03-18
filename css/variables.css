@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+
+  --colorMainWhite: #FDFDFD;
+  --colorMainBlack: #131313;
+
+  --colorAccent1: #9A011D;
+  --colorAccent2: #321224;
+  --colorAccent3: #5F0A40;
+
+  --fontHeader: Bungee, serif;
+  --fontText: 'Open Sans', Arial, sans serif;
+
+}
