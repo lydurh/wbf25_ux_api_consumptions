@@ -1,0 +1,6 @@
+import { NOW_PLAYING, POPULAR, TOP_RATED, UPCOMING  } from "./script.js";
+
+NOW_PLAYING();
+POPULAR();
+TOP_RATED();
+UPCOMING();
