@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Movie Database</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" type="module"></script>
+  <script type="module" src="js/script.js"></script>
 </head>
 <body>
 
@@ -21,7 +21,8 @@
     </ul>
   </nav>
   
-  <main>
+  <main id="upcoming-list">
+  
   </main>
   
   <footer>
@@ -29,4 +30,20 @@
   </footer>
 </body>
 
+
+<template id="now-playing-card">
+  <article>
+    <div class>
+      <h2></h2>
+      <img src="" alt="">
+      <p id="description"></p>
+      <p id="small-title"><b>Original title: </b></p>
+      <p id="release_date"><b>Release date: </b></p>
+    </div>
+  </article>
+</template>
+
+
+
+</template>
 </html>
