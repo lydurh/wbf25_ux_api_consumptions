@@ -12,7 +12,11 @@ fetchNowPlaying()
     card.querySelector('#description').innerText = movie.overview;
 
     const poster = card.querySelector('img');
-    poster.setAttribute('src', movie.poster_path);
+    const imagePath = movie.poster_path || movie.backdrop_path;
+    const imageUrl = imagePath ? `https://image.tmdb.org/t/p/w500${imagePath}` : 'assets/img/default-image.png';
+
+
+    poster.setAttribute('src', imageUrl);
     poster.setAttribute('alt', movie.original_title);
 
     card.querySelector('#small-title').innerText = movie.original_title;
