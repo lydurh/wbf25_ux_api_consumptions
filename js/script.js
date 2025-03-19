@@ -1,4 +1,5 @@
-import { fetchNowPlaying } from "./info.js";
+
+import { fetchNowPlaying } from './info.js';
 
 
 fetchNowPlaying()
@@ -28,7 +29,7 @@ fetchNowPlaying()
     
   });
   document.querySelector('#upcoming-list').appendChild(movieList);
-})
+});
 
 
 
