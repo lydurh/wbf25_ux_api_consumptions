@@ -11,3 +11,4 @@ export const fetchMovies = async (category) => {
     return { results: [] };
   }
 };
+

@@ -2,13 +2,15 @@ import { fetchMovies } from './info.js';
 
 
 const loadMovies = async (category) => {
-  const movieContainer = document.querySelector('main') // potential error?
+  const movieContainer = document.querySelector('main'); 
 
   const data = await fetchMovies(category);
   const movieList = document.createDocumentFragment();
 
   data.results.forEach(movie => {
     const card = document.querySelector('#movie-card').content.cloneNode(true);
+    movieContainer.innerHTML = '';
+
 
     card.querySelector('h2').innerText = movie.title;
 
@@ -33,7 +35,7 @@ const loadMovies = async (category) => {
 
 
 
-document.querySelectorAll('.nav-buttin').forEach(button => {
+document.querySelectorAll('.nav-button').forEach(button => {
   button.addEventListener('click', (event) => {
     const category = event.target.dataset.category;
     loadMovies(category);
@@ -41,6 +43,6 @@ document.querySelectorAll('.nav-buttin').forEach(button => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadMovies('now_playing'); 
+  loadMovies('top_rated'); 
 });
 
