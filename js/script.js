@@ -1,8 +1,12 @@
 import { fetchMovies } from './info.js';
 
-fetchMovies()
-.then (data => {
+
+const loadMovies = async (category) => {
+  const movieContainer = document.querySelector('main') // potential error?
+
+  const data = await fetchMovies(category);
   const movieList = document.createDocumentFragment();
+
   data.results.forEach(movie => {
     const card = document.querySelector('#movie-card').content.cloneNode(true);
 
@@ -23,11 +27,20 @@ fetchMovies()
     card.querySelector('#release_date').innerText = movie.release_date;
 
   movieList.append(card);
-    
-    
   });
-  document.querySelector('main').appendChild(movieList);
+  movieContainer.appendChild(movieList);
+};
+
+
+
+document.querySelectorAll('.nav-buttin').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const category = event.target.dataset.category;
+    loadMovies(category);
+  });
 });
 
-
+document.addEventListener('DOMContentLoaded', () => {
+  loadMovies('now_playing'); 
+});
 
