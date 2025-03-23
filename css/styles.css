@@ -33,12 +33,15 @@ nav {
       list-style: none;
 
       
-      a {
+      button {
         text-decoration: none;
+        background-color: transparent;
+        border: none;
         color: var(--colorMainWhite);
 
       &:hover {
         color: var(--colorAccent2);
+        cursor: pointer;
       }
       }
     }

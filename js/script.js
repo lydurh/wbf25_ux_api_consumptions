@@ -1,12 +1,10 @@
+import { fetchMovies } from './info.js';
 
-import { fetchNowPlaying } from './info.js';
-
-
-fetchNowPlaying()
+fetchMovies()
 .then (data => {
   const movieList = document.createDocumentFragment();
   data.results.forEach(movie => {
-    const card = document.querySelector('#now-playing-card').content.cloneNode(true);
+    const card = document.querySelector('#movie-card').content.cloneNode(true);
 
     card.querySelector('h2').innerText = movie.title;
 
@@ -28,7 +26,7 @@ fetchNowPlaying()
     
     
   });
-  document.querySelector('#upcoming-list').appendChild(movieList);
+  document.querySelector('main').appendChild(movieList);
 });
 
 
