@@ -8,7 +8,7 @@ const loadMovies = async (category) => {
   const movieList = document.createDocumentFragment();
 
   data.results.forEach(movie => {
-    const card = document.querySelector('#movie-card').content.cloneNode(true);
+    const card = document.querySelector('.movie-card').content.cloneNode(true);
     movieContainer.innerHTML = '';
 
 
@@ -24,9 +24,9 @@ const loadMovies = async (category) => {
     poster.setAttribute('src', imageUrl);
     poster.setAttribute('alt', movie.original_title);
 
-    card.querySelector('#small-title').innerText = movie.original_title;
+    card.querySelector('#small_title span').innerText = movie.original_title;
 
-    card.querySelector('#release_date').innerText = movie.release_date;
+    card.querySelector('#release_date span').innerText = movie.release_date;
 
   movieList.append(card);
   });

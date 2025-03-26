@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-header, footer, nav {
+header, footer, nav, main {
   padding: 0.5rem 1rem;
 }
 
@@ -57,12 +57,42 @@ nav {
 
 }
 
-main {
-  margin: 1rem;
-}
+
 
 footer {
   background-color: var(--colorAccent2);
   color: var(--colorMainWhite);
   text-align: center;
 }
+
+/* section {
+  display: flex;
+  flex-flow: row nowrap;
+} */
+
+
+article {
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  border-color: red;
+  border-width: 1rem;
+
+  section {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media (min-width: 760px){
+      flex-flow: row nowrap;
+    }
+
+    p {
+      max-width: 80ch;
+    }
+
+    img {
+      max-width: 200px;
+      max-height: 260;
+    }
+  }
+}
+
