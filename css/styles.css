@@ -10,6 +10,8 @@ header, footer, nav, main {
   padding: 0.5rem 1rem;
 }
 
+
+
 header {
   background-color: var(--colorAccent2);
   color: var(--colorMainWhite);
@@ -65,33 +67,52 @@ footer {
   text-align: center;
 }
 
-/* section {
-  display: flex;
-  flex-flow: row nowrap;
-} */
 
 
 article {
+  margin: auto;
   padding-bottom: 1rem;
   border-radius: 1rem;
   border-color: red;
   border-width: 1rem;
 
+  @media (min-width: 1000px){
+    max-width: 80%;
+  }
+
+  header {
+    border-radius: 1rem 1rem 0 0;
+
+  }
+
   section {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    border: 0.2rem solid var(--colorAccent2);
+    border-radius: 0 0 1rem 1rem;
 
     @media (min-width: 760px){
       flex-flow: row nowrap;
     }
 
-    p {
-      max-width: 80ch;
+    div {
+      padding: 0.5rem;
+      p {
+        max-width: 80ch;
+        padding-bottom: 0.5rem;
+      }
+        
     }
-
-    img {
-      max-width: 200px;
-      max-height: 260;
+    .movie-poster {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 200px;
+        max-height: 260;
+        border-radius: 0.5rem;
+        
+      }
     }
   }
 }
